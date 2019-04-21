@@ -21,7 +21,7 @@ namespace laboratoriniai
 			int mid = tempList.Count / 2;
 			double median = (mid % 2 != 0) ?
 				tempList[mid] :
-				(tempList[mid] + tempList[mid - 1] / 2);
+				((tempList[mid] + tempList[mid - 1]) / 2);
 			return Math.Round(median * 0.3 + examResult * 0.7, 2);
 		}
 
@@ -37,6 +37,11 @@ namespace laboratoriniai
 					Console.WriteLine("{0,-15}{1,-15}{2,-10}", "Vardas", "Pavarde", "Galutinis (med)");
 					foreach (var students in list) {
 						Console.WriteLine("{0,-15}{1,-15}{2,-10}", students.Name, students.Surname, CalculateMedian(students.Results, students.ExamResult));
+					}
+				} else if (vidOrMed == 3) {
+					Console.WriteLine("{0,-15}{1,-15}{2,-20}{3,-15}", "Vardas", "Pavarde", "Galutinis (vid)", "Galutinis (med)");
+					foreach (var students in list) {
+						Console.WriteLine("{0,-15}{1,-15}{2,-20}{3,-15}", students.Name, students.Surname, CalculateFilnalResult(students.Results, students.ExamResult), CalculateMedian(students.Results, students.ExamResult));
 					}
 				}
 			}

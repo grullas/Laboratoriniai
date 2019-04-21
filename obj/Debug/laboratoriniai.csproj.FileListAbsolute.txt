@@ -1,2 +1,7 @@
 C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.csprojAssemblyReference.cache
 C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.csproj.CoreCompileInputs.cache
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\bin\Debug\laboratoriniai.exe.config
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\bin\Debug\laboratoriniai.exe
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\bin\Debug\laboratoriniai.pdb
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.exe
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.pdb
