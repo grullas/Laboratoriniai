@@ -1,0 +1,2 @@
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.csprojAssemblyReference.cache
+C:\Users\grull\source\repos\laboratoriniai\laboratoriniai\obj\Debug\laboratoriniai.csproj.CoreCompileInputs.cache
