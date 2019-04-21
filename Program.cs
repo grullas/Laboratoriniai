@@ -23,28 +23,34 @@ namespace laboratoriniai
 			rankaOrRead = int.Parse(Console.ReadLine());
 			if(rankaOrRead == 1) {
 				string line;
-				StreamReader file =
-					new StreamReader("../../kursiokai.txt");
-				while((line = file.ReadLine()) != null) {
-					line = Regex.Replace(line, @"\s+", " ");
-					fileSplit = line.Split(' ');
-					int stringLenth = fileSplit.Length - 1;
-					int counter = 2;
+				try {
+					StreamReader file =
+						new StreamReader("../../kursiokai.txt");
+					while ((line = file.ReadLine()) != null) {
+						line = Regex.Replace(line, @"\s+", " ");
+						fileSplit = line.Split(' ');
+						int stringLenth = fileSplit.Length - 1;
+						int counter = 2;
 
-					if(fileSplit[0] != "Vardas") {
-						Student student = new Student {
-							Results = new List<int>()
-						};
-						student.Name = fileSplit[0];
-						student.Surname = fileSplit[1];
-						student.ExamResult = int.Parse(fileSplit[stringLenth]);
-						while (stringLenth > counter) {
-							student.Results.Add(int.Parse(fileSplit[counter]));
-							counter++;
+						if (fileSplit[0] != "Vardas") {
+							Student student = new Student {
+								Results = new List<int>()
+							};
+							student.Name = fileSplit[0];
+							student.Surname = fileSplit[1];
+							student.ExamResult = int.Parse(fileSplit[stringLenth]);
+							while (stringLenth > counter) {
+								student.Results.Add(int.Parse(fileSplit[counter]));
+								counter++;
+							}
+							people.Add(student);
 						}
-						people.Add(student);
 					}
 				}
+				catch (Exception ex) {
+					Console.WriteLine("Ivyko klaida: " + ex);
+				}
+				
 				people = people.OrderBy(x => x.Name).ThenBy(x => x.Surname).ToList();
 
 			} else if (rankaOrRead == 2) {
