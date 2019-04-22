@@ -19,7 +19,7 @@ namespace laboratoriniai
 
 			List<Student> people = new List<Student>();
 
-			Console.WriteLine("skaityti is file (spauskite 1), vesti ranka (spauskite 2)");
+			Console.WriteLine("skaityti is file (spauskite 1), vesti ranka (spauskite 2), sugeneruoti 5 atsitiktinius studentu sarasus (spauskite 3)");
 			rankaOrRead = int.Parse(Console.ReadLine());
 			if(rankaOrRead == 1) {
 				string line;
@@ -46,6 +46,7 @@ namespace laboratoriniai
 							people.Add(student);
 						}
 					}
+					file.Close();
 				}
 				catch (Exception ex) {
 					Console.WriteLine("Ivyko klaida: " + ex);
@@ -78,7 +79,21 @@ namespace laboratoriniai
 					Console.WriteLine("Jei norite prideti studenta, iveskite varda ir pavarde, jei ne palikite tuscia eilute");
 					vardasPavarde = Console.ReadLine();
 				}
+			} else if(rankaOrRead == 3) {
+				Functions.GenerateRandomListFile(10);
+				Functions.GenerateRandomListFile(100);
+				Functions.GenerateRandomListFile(1000);
+				Functions.GenerateRandomListFile(10000);
+				Functions.GenerateRandomListFile(100000);
+			} else if (rankaOrRead == 4) {
+				Functions.SortListAndGenerateFiles(10);
+				Functions.SortListAndGenerateFiles(100);
+				Functions.SortListAndGenerateFiles(1000);
+				Functions.SortListAndGenerateFiles(10000);
+				Functions.SortListAndGenerateFiles(100000);
+
 			}
+
 			Console.WriteLine("Isvesti galutini pagal vidurki (spauskite 1) arba pagal mediana (spauskite 2), arba pagal abu (spauskite 3)");
 			vidOrMed = int.Parse(Console.ReadLine());
 			Functions.GetResultsToScreen(people, vidOrMed);
